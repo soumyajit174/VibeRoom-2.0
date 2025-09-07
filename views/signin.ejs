@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create / Join Room</title>
+  <link rel="stylesheet" href="/stylesheets/signin.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Chat Rooms</h1>
+
+    <!-- Tab Buttons -->
+    <div class="tab-container">
+      <button class="tab-btn active" data-target="createRoomForm">Create Room</button>
+      <button class="tab-btn" data-target="joinRoomForm">Join Room</button>
+    </div>
+
+    <!-- Create Room Form -->
+    <form id="createRoomForm" class="active" action="/room/create" method="POST">
+      <h2>Create Room</h2>
+      <input type="text" name="username" placeholder="Enter Username" required />
+      <input type="email" name="email" placeholder="Enter Email" required />
+      <button type="submit">Create Room</button>
+    </form>
+
+    <!-- Join Room Form -->
+    <form id="joinRoomForm" style="display:none;" action="/room/join-room" method="POST">
+      <h2>Join Room</h2>
+      <input type="text" name="username" placeholder="Enter Username" required />
+      <input type="email" name="email" placeholder="Enter Email" required />
+      <input type="text" name="roomKey" placeholder="Enter Room ID" required />
+      <button type="submit">Join Room</button>
+    </form>
+  </div>
+
+  <script src="/javascripts/signin.js"></script>
+</body>
+</html>
